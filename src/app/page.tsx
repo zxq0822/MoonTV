@@ -23,7 +23,7 @@ function HomeClient() {
   const [loading, setLoading] = useState(true);
   const { announcement } = useSite();
 
-  const [showAnnouncement, setShowAnnouncement] = useState(() => {
+  /** const [showAnnouncement, setShowAnnouncement] = useState(() => {
     // 检查本地存储中是否已记录弹窗显示状态
     const hasSeenAnnouncement = localStorage.getItem('hasSeenAnnouncement');
     if (hasSeenAnnouncement !== announcement) {
@@ -31,6 +31,8 @@ function HomeClient() {
     }
     return !hasSeenAnnouncement && announcement; // 未记录且有公告时显示弹窗
   });
+*/
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
 
   // 收藏夹数据
   type FavoriteItem = {
