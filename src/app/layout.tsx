@@ -14,15 +14,11 @@ import { ThemeProvider } from '../components/ThemeProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 // 动态生成 metadata，支持配置更新后的标题变化
-export async function generateMetadata(): Promise<Metadata> {
-  const config = getConfig();
-
-  return {
-    title: 'QingTV',
-    description: '',
-    manifest: '/manifest.json',
-  };
-}
+export const metadata: Metadata = {
+  title: 'QingTV',
+  description: '影视聚合',
+  manifest: '/manifest.json',
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
