@@ -13,9 +13,10 @@ import { ThemeProvider } from '../components/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// 动态生成 metadata，支持配置更新后的标题变化
+const config = getConfig();
+
 export const metadata: Metadata = {
-  title: 'QingTV',
+  title: 'QingTV', // 修改为 QingTV
   description: '影视聚合',
   manifest: '/manifest.json',
 };
@@ -33,8 +34,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const config = getConfig();
-  const siteName = config.SiteConfig.SiteName;
+  const siteName = 'QingTV'; // 修改为 QingTV
   const announcement = config.SiteConfig.Announcement;
 
   // 将运行时配置注入到全局 window 对象，供客户端在运行时读取
