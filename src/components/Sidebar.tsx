@@ -39,14 +39,14 @@ export const useSidebar = () => useContext(SidebarContext);
 
 // 可替换为你自己的 logo 图片
 const Logo = () => {
-  const { siteName } = useSite();
+  // 将这里的 siteName 替换为固定的 QingTV
   return (
     <Link
       href='/'
       className='flex items-center justify-center h-16 select-none hover:opacity-80 transition-opacity duration-200'
     >
       <span className='text-2xl font-bold text-green-600 tracking-tight'>
-        {siteName}
+        QingTV
       </span>
     </Link>
   );
