@@ -18,8 +18,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();
 
   return {
-    title: config.SiteConfig.SiteName,
-    description: '影视聚合',
+    title: 'QingTV',
+    description: '',
     manifest: '/manifest.json',
   };
 }
